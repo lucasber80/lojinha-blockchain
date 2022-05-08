@@ -1,11 +1,6 @@
-pragma solidity ^0.8.7;
-
+import "hardhat/console.sol";
 contract Marketplace{
-        string public nome = "ana";
-
-    function mudarNome(string memory _nome)public{
-        nome = _nome;
-    }
+    address public marketplaceAddres = 0x01a4dF6d79bb3802C1A6F267261b536E6Dc9E792;
 
     function pagar(address loja)public payable{
         payable(loja).transfer(msg.value);

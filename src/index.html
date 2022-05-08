@@ -5,97 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="../node_modules/web3/dist/web3.min.js"></script>
+    <script src="./app.js"></script>
+    <script src="./config.js"></script>
+
     <title>Document</title>
   </head>
   <body>
-    <button id="pegarNome">getome</button>
-    <button id="pagar">pagar</button>
-    <button id="mudarNome">mudar nome</button>
+    <button id="pagar" class="btn btn-dark">pagar</button>
     <script>
-      let endereco = "0x3d530cab3b7747b5ee189a4e2ef691aa80cba31b";
-      let abi = [
-    {
-      "inputs": [],
-      "name": "nome",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function",
-      "constant": true
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "_nome",
-          "type": "string"
-        }
-      ],
-      "name": "mudarNome",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "loja",
-          "type": "address"
-        }
-      ],
-      "name": "pagar",
-      "outputs": [],
-      "stateMutability": "payable",
-      "type": "function",
-      "payable": true
-    }
-  ]
-
-      async function conectar() {
-        let resultado = await ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        console.log(resultado);
-      }
-
-      async function pagar() {
-        const web3 = await new Web3(window.ethereum);
-        let contrato = await new web3.eth.Contract(abi, endereco);
-        let contas = await web3.eth.getAccounts();
-        let conta = contas[0];
-        let recipiet = await contrato.methods
-          .pagar("0x443AEa45fdc721581B1990aA1040C88185680f75")
-          .send({ from: conta, value: 1000000000000000000 });
-        console.log(recipiet);
-      }
-
-      async function pegarNome() {
-        const web3 = await new Web3(window.ethereum);
-        let contrato = await new web3.eth.Contract(abi, endereco);
-        let nome = await contrato.methods.nome().call();
-        console.log(nome);
-      }
-
-      async function mudarNome() {
-        const web3 = await new Web3(window.ethereum);
-        let contrato = await new web3.eth.Contract(abi, endereco);
-        let contas = await web3.eth.getAccounts();
-        let conta = contas[0]
-        let nome = await contrato.methods.mudarNome("tesntado").send({from:conta});
-        console.log(nome);
-      }
-
       conectar();
-
-      document.getElementById("pegarNome").addEventListener("click", pegarNome);
       document.getElementById("pagar").addEventListener("click", pagar);
-      document.getElementById("mudarNome").addEventListener("click", mudarNome);
     </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
