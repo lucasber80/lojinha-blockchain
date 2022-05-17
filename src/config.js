@@ -1,43 +1,43 @@
-let endereco = "0x270323a3adae6888e4e11ae26ab8b7f29714bc9f";
-const loja = "0xc22134Fa1240890c7140A66395f511Db440e56f9";
+let endereco = "0x2d1606f49e01d58bdc9877a6f3e97cd37ec7d9e8";
+const loja =   "0x5635fD9053C5B28b81d573364ec7fB49F85eb1fB";
 let abi = [
   {
-    inputs: [
+    "inputs": [],
+    "name": "nome",
+    "outputs": [
       {
-        internalType: "address",
-        name: "loja",
-        type: "address",
-      },
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
     ],
-    name: "pagar",
-    outputs: [],
-    stateMutability: "payable",
-    type: "function",
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [
+    "inputs": [
       {
-        internalType: "uint256",
-        name: "id",
-        type: "uint256",
-      },
+        "internalType": "string",
+        "name": "_novoNome",
+        "type": "string"
+      }
     ],
-    name: "comprar",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
+    "name": "mudaNome",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
   },
   {
-    inputs: [],
-    name: "getItens",
-    outputs: [
+    "inputs": [
       {
-        internalType: "address[16]",
-        name: "",
-        type: "address[16]",
-      },
+        "internalType": "address",
+        "name": "loja",
+        "type": "address"
+      }
     ],
-    stateMutability: "view",
-    type: "function",
-  },
-];
+    "name": "pagar",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  }
+]
