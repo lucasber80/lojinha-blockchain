@@ -1,43 +1,30 @@
-let endereco = "0x2d1606f49e01d58bdc9877a6f3e97cd37ec7d9e8";
-const loja =   "0x5635fD9053C5B28b81d573364ec7fB49F85eb1fB";
-let abi = [
+let endereco = "0x7c5ee9376f663d84255424d9dea384ec9f5ef1d1";
+let lojas = [
+  "0x5F4bf4E35781775C1Bb798cE436EbfaFE6088f6F",
+  "0xC17E134d9F3d5bA2306cdfABaafAeaf655BB5853",
+  "0xFC5A3Bb04000aE57407b133d388AF650cF547F8B",
+]
+
+let itens = [
   {
-    "inputs": [],
-    "name": "nome",
-    "outputs": [
-      {
-        "internalType": "string",
-        "name": "",
-        "type": "string"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "_novoNome",
-        "type": "string"
-      }
-    ],
-    "name": "mudaNome",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "loja",
-        "type": "address"
-      }
-    ],
-    "name": "pagar",
-    "outputs": [],
-    "stateMutability": "payable",
-    "type": "function"
+    price:1,
+    title:"headset gamer logitech"
   }
 ]
+
+let abi = [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "loja",
+          "type": "address"
+        }
+      ],
+      "name": "pagar",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function",
+      "payable": true
+    }
+  ]

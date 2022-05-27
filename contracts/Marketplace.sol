@@ -1,12 +1,7 @@
-
-contract Marketplace{
-    string public nome = "vazio";
-
-    function mudaNome(string memory _novoNome)public{
-        nome = _novoNome;
-    }
-
-    function pagar(address loja)public payable{
+pragma solidity ^0.8.13;
+pragma experimental ABIEncoderV2;
+contract Marketplace {
+    function pagar(address loja) public payable {
         payable(loja).transfer(msg.value);
     }
 

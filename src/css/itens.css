@@ -1,0 +1,39 @@
+.item{
+    width: 250px;
+    height: 310px;
+}
+
+.main{
+    padding: 10px;
+}
+
+
+.image-item{
+    width: max-content;
+    height: 150px;
+    object-fit: contain;
+}
+
+.item p{
+    font-weight: 600;
+}
+
+.price-body{
+    font-weight: bold;
+    font-size: 25px ;
+    color: black;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+
+.coin{
+    margin-left: 10px;
+
+}
+
+.icon{
+    width: 22px;
+    height: 22px;
+}
