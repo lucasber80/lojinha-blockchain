@@ -1,14 +1,18 @@
-let endereco = "0x7c5ee9376f663d84255424d9dea384ec9f5ef1d1";
+let endereco = "0x19768afe4981b162d7a851418a16eb00f85c0581";
 let lojas = [
-  "0x5F4bf4E35781775C1Bb798cE436EbfaFE6088f6F",
-  "0xC17E134d9F3d5bA2306cdfABaafAeaf655BB5853",
-  "0xFC5A3Bb04000aE57407b133d388AF650cF547F8B",
+  "0xD0553fdeA1ABE8b59175d77112c40b3E19054137",
+  "0xb5546122495A64843D3ae27752c567D32f719CD0",
+  "0x78F281f168584C8cf416d4da0b197711BCd34CEA",
 ]
 
 let itens = [
   {
     price:1,
     title:"headset gamer logitech"
+  },
+  {
+    price:2,
+    title:"Processador intal"
   }
 ]
 
