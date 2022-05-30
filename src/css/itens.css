@@ -3,8 +3,17 @@
     height: 310px;
 }
 
+.div-card{
+    padding: 10px;
+}
+
 .main{
     padding: 10px;
+  
+}
+
+.items-div{
+    background-color: red;
 }
 
 
